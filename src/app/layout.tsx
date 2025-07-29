@@ -12,21 +12,22 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "GATCON",
-  description: "GEFS Impex PVT. LTD.",
+
+import React from "react";
+
+export const metadata = {
+  title: "Product Management App",
+  description: "A simple CRUD app for managing products",
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
